@@ -183,8 +183,13 @@ const learningProgress = new LearningProgress();
 // ==========================================
 document.querySelectorAll(".timeline-item").forEach((item, index) => {
   item.addEventListener("click", () => {
+    document.querySelectorAll(".timeline-item").forEach((node) => {
+      node.classList.remove("active");
+      node.setAttribute("aria-pressed", "false");
+    });
     learningProgress.updateCurrentStep(index);
     item.classList.add("active");
+    item.setAttribute("aria-pressed", "true");
 
     // Show visual feedback
     const content = item.querySelector(".timeline-content");
@@ -192,6 +197,13 @@ document.querySelectorAll(".timeline-item").forEach((item, index) => {
     setTimeout(() => {
       content.style.transform = "";
     }, 300);
+  });
+
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      item.click();
+    }
   });
 });
 
