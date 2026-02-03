@@ -11,696 +11,350 @@
       name="keywords"
       content="量化交易, AI因子挖掘, 情绪指标, Python量化, 策略开发, 风险管理"
     />
-    <title>量化交易学习中心 - 从零开始的系统化学习路径</title>
+    <title>量化交易学习中心 | Deep Quant Learning</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- Navbar -->
     <nav class="navbar">
-      <div class="container">
+      <div class="container nav-container">
         <div class="nav-brand">
-          <span class="logo-icon">📊</span>
-          <span class="logo-text">量化交易学习中心</span>
+          <span>⚡</span>
+          Deep Quant
         </div>
+        
+        <div class="mobile-toggle" id="mobileToggle">
+          <span></span><span></span><span></span>
+        </div>
+
         <ul class="nav-menu" id="navMenu">
-          <li><a href="#home" class="nav-link">首页</a></li>
+          <li><a href="#home" class="nav-link">概览</a></li>
           <li><a href="#roadmap" class="nav-link">学习路径</a></li>
           <li><a href="#modules" class="nav-link">核心模块</a></li>
-          <li><a href="#start" class="nav-link cta-button">开始学习</a></li>
+          <li><a href="#start" class="btn-start">开始学习</a></li>
         </ul>
-        <div class="mobile-menu-toggle" id="mobileToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-background"></div>
+      <!-- Ambient Background FX -->
+      <div class="hero-bg-fx">
+        <div class="hero-orb one"></div>
+        <div class="hero-orb two"></div>
+      </div>
+
       <div class="container">
         <div class="hero-content">
-          <h1 class="hero-title">
-            <span class="gradient-text">从零到一</span>
-            <br />掌握量化交易
+          <span class="badge animate-in">Quant Learning v2.0</span>
+          
+          <h1 class="hero-title animate-in delay-100">
+            掌握 <span class="text-gradient">AI驱动</span> 的<br>
+            量化交易未来
           </h1>
-          <p class="hero-subtitle">
-            系统化学习AI驱动的因子挖掘、社交媒体情绪分析、策略开发与风险管理
+          
+          <p class="hero-desc animate-in delay-200">
+            从零打造顶级机构的交易系统。融合机器学习因子挖掘、Twitter情绪指标与专业风险控制的完整实战指南。
           </p>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <div class="stat-number">6+</div>
-              <div class="stat-label">核心模块</div>
+
+          <div class="hero-actions animate-in delay-300">
+            <a href="#roadmap" class="btn-glow">探索学习路径</a>
+            <a href="https://github.com/kayzenline/quant-learning-web" target="_blank" class="btn-outline">GitHub 源码</a>
+          </div>
+
+          <div class="stat-row animate-in delay-300">
+            <div class="stat-box">
+              <span class="stat-val">6+</span>
+              <span class="stat-label">核心模块</span>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">∞</div>
-              <div class="stat-label">实战项目</div>
+            <div class="stat-box">
+              <span class="stat-val">24</span>
+              <span class="stat-label">精选资源</span>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">AI</div>
-              <div class="stat-label">驱动创新</div>
+            <div class="stat-box">
+              <span class="stat-val">∞</span>
+              <span class="stat-label">实战项目</span>
             </div>
           </div>
-          <a href="#roadmap" class="btn btn-primary btn-large">开始你的旅程</a>
         </div>
-      </div>
-      <div class="hero-scroll-indicator">
-        <span>向下滚动探索</span>
-        <div class="scroll-arrow">↓</div>
       </div>
     </section>
 
     <!-- Learning Roadmap -->
-    <section class="roadmap" id="roadmap">
+    <!-- Roadmap -->
+    <section id="roadmap">
       <div class="container">
-        <h2 class="section-title">学习路径</h2>
-        <p class="section-subtitle">循序渐进，从基础到精通的系统化学习体系</p>
+        <div class="section-header">
+          <h2 class="section-title">系统化学习路径</h2>
+          <p class="section-subtitle">从基础概念到实盘部署的8个关键里程碑</p>
+        </div>
 
-        <div class="roadmap-timeline">
-          <div class="timeline-item" data-step="1" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">01</span>
-            </div>
-            <div class="timeline-content">
-              <h3>基础入门</h3>
-              <p>理解量化交易的本质、市场结构、交易类型和基本概念</p>
-              <ul class="timeline-list">
-                <li>什么是量化交易</li>
-                <li>市场微观结构</li>
-                <li>高频vs低频策略</li>
-                <li>量化交易生态</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://en.wikipedia.org/wiki/Algorithmic_trading"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：算法交易（Wikipedia）
-                </a>
+        <div class="timeline-track">
+          
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-marker">01</div>
+            <div class="step-content">
+              <h3 class="step-title">基础入门</h3>
+              <p class="step-desc">建立量化思维，理解市场微观结构与算法交易生态。</p>
+              <div class="step-tags">
+                <span class="tag">市场结构</span>
+                <span class="tag">交易类型</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="2" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">02</span>
-            </div>
-            <div class="timeline-content">
-              <h3>数学与统计基础</h3>
-              <p>掌握量化交易必备的数学和统计学知识</p>
-              <ul class="timeline-list">
-                <li>概率论与统计推断</li>
-                <li>时间序列分析</li>
-                <li>线性代数基础</li>
-                <li>最优化理论</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://openlearninglibrary.mit.edu/courses/course-v1:MITx+18.05r_10+2022_Summer/about"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：概率与统计入门（MIT Open Learning）
-                </a>
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-marker">02</div>
+            <div class="step-content">
+              <h3 class="step-title">数学与统计</h3>
+              <p class="step-desc">掌握概率论、时间序列分析与线性代数核心。</p>
+              <div class="step-tags">
+                <span class="tag">概率论</span>
+                <span class="tag">时间序列</span>
+                <span class="tag">优化理论</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="3" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">03</span>
-            </div>
-            <div class="timeline-content">
-              <h3>Python编程技能</h3>
-              <p>从零开始学习Python，掌握数据处理和API调用</p>
-              <ul class="timeline-list">
-                <li>Python基础语法</li>
-                <li>NumPy & Pandas数据处理</li>
-                <li>交易所API接口</li>
-                <li>数据可视化技术</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://docs.python.org/3/tutorial/index.html"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：Python官方教程（Python Docs）
-                </a>
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-marker">03</div>
+            <div class="step-content">
+              <h3 class="step-title">Python 编程</h3>
+              <p class="step-desc">构建数据处理管道，掌握 Pandas 与 API 交互。</p>
+              <div class="step-tags">
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">API集成</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="4" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">04</span>
-            </div>
-            <div class="timeline-content">
-              <h3>AI驱动的因子挖掘</h3>
-              <p>利用机器学习自动发现和迭代交易因子</p>
-              <ul class="timeline-list">
-                <li>传统因子体系（动量、价值、质量）</li>
-                <li>特征工程与因子构建</li>
-                <li><strong class="highlight">AI自动因子挖掘</strong></li>
-                <li><strong class="highlight">因子迭代优化框架</strong></li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://institutional.fidelity.com/advisors/insights/topics/investing-ideas/an-overview-of-factor-investing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：因子投资概览（Fidelity）
-                </a>
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-marker">04</div>
+            <div class="step-content">
+              <h3 class="step-title text-gradient">AI 因子挖掘</h3>
+              <p class="step-desc">利用机器学习自动发现 Alpha，建立因子迭代工厂。</p>
+              <div class="step-tags">
+                <span class="tag">AutoML</span>
+                <span class="tag">特征工程</span>
+                <span class="tag">遗传算法</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="5" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">05</span>
-            </div>
-            <div class="timeline-content">
-              <h3>情绪指标开发</h3>
-              <p>通过爬虫技术挖掘社交媒体和新闻情绪</p>
-              <ul class="timeline-list">
-                <li><strong class="highlight">X(Twitter) 情绪爬虫</strong></li>
-                <li><strong class="highlight">主流媒体资讯抓取</strong></li>
-                <li>NLP情感分析技术</li>
-                <li>情绪指标构建与回测</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://en.wikipedia.org/wiki/Sentiment_analysis"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：情绪分析（Wikipedia）
-                </a>
+          <!-- Step 5 -->
+          <div class="step-card">
+            <div class="step-marker">05</div>
+            <div class="step-content">
+              <h3 class="step-title text-gradient">情绪指标开发</h3>
+              <p class="step-desc">NLP 解析 X(Twitter) 与新闻流，捕捉市场情绪异动。</p>
+              <div class="step-tags">
+                <span class="tag">NLP</span>
+                <span class="tag">Sentiment Analysis</span>
+                <span class="tag">BERT</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="6" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">06</span>
-            </div>
-            <div class="timeline-content">
-              <h3>策略开发与回测</h3>
-              <p>构建完整的策略开发和验证框架</p>
-              <ul class="timeline-list">
-                <li>回测框架搭建</li>
-                <li>策略性能评估</li>
-                <li>参数优化方法</li>
-                <li>过拟合检测</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://en.wikipedia.org/wiki/Backtesting"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：回测基础（Wikipedia）
-                </a>
+          <!-- Step 6 -->
+          <div class="step-card">
+            <div class="step-marker">06</div>
+            <div class="step-content">
+              <h3 class="step-title">策略回测</h3>
+              <p class="step-desc">依托 Backtrader 构建稳健的回测系统与性能评估。</p>
+              <div class="step-tags">
+                <span class="tag">Backtrader</span>
+                <span class="tag">过拟合检测</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="7" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">07</span>
-            </div>
-            <div class="timeline-content">
-              <h3>风险管理</h3>
-              <p>学习专业的风险控制和资金管理技术</p>
-              <ul class="timeline-list">
-                <li>仓位管理策略</li>
-                <li>VaR风险度量</li>
-                <li>止损止盈设计</li>
-                <li>Kelly公式应用</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://www.investopedia.com/terms/r/riskmanagement.asp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：风险管理（Investopedia）
-                </a>
+          <!-- Step 7 -->
+          <div class="step-card">
+            <div class="step-marker">07</div>
+            <div class="step-content">
+              <h3 class="step-title">风险管理</h3>
+              <p class="step-desc">基于 Kelly 公式与 VaR 模型构建风控护城河。</p>
+              <div class="step-tags">
+                <span class="tag">VaR</span>
+                <span class="tag">仓位管理</span>
               </div>
             </div>
           </div>
 
-          <div class="timeline-item" data-step="8" role="button" tabindex="0" aria-pressed="false">
-            <div class="timeline-marker">
-              <span class="marker-number">08</span>
-            </div>
-            <div class="timeline-content">
-              <h3>实盘部署</h3>
-              <p>将策略从回测推向实盘交易</p>
-              <ul class="timeline-list">
-                <li>模拟盘测试</li>
-                <li>实盘架构设计</li>
-                <li>监控与告警系统</li>
-                <li>持续迭代优化</li>
-              </ul>
-              <div class="timeline-link">
-                <a
-                  href="https://en.wikipedia.org/wiki/Order_management_system"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  简介链接：订单管理系统（OMS）（Wikipedia）
-                </a>
+          <!-- Step 8 -->
+          <div class="step-card">
+            <div class="step-marker">08</div>
+            <div class="step-content">
+              <h3 class="step-title">实盘部署</h3>
+              <p class="step-desc">低延迟执行系统搭建与云端监控运维。</p>
+              <div class="step-tags">
+                <span class="tag">OMS/EMS</span>
+                <span class="tag">AWS部署</span>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- Core Modules -->
-    <section class="modules" id="modules">
+    <section id="modules">
       <div class="container">
-        <h2 class="section-title">核心学习模块</h2>
-        <p class="section-subtitle">深入探索每个关键领域</p>
+        <div class="section-header">
+          <h2 class="section-title">核心知识图谱</h2>
+          <p class="section-subtitle">六大支柱模块，构建完整的量化交易能力矩阵</p>
+        </div>
 
-        <div class="modules-grid">
-          <!-- Module 1: AI Factor Mining -->
-          <div class="module-card featured" data-module-id="ai-factor-mining">
-            <div class="module-image">
-              <img
-                src="assets/images/ai-factor-mining.png"
-                alt="AI驱动的因子挖掘"
-              />
-              <div class="module-badge">AI驱动</div>
+        <div class="module-grid">
+          
+          <!-- Module 1 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <img src="assets/images/ai-factor-mining.png" alt="AI Factor Mining">
+              <div class="module-badge ai">AI Core</div>
             </div>
-            <div class="module-content">
-              <h3>AI因子挖掘</h3>
-              <p>
-                利用机器学习技术自动发现和迭代优化交易因子，突破传统因子研究的局限。
-              </p>
-              <ul class="feature-list">
-                <li>✓ 自动特征工程</li>
-                <li>✓ 遗传算法优化</li>
-                <li>✓ 深度学习因子</li>
-                <li>✓ 实时因子更新</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Scikit-learn</span>
-                <span class="tech-tag">TensorFlow</span>
-                <span class="tech-tag">AutoML</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">AI 因子挖掘</h3>
+              <p class="module-desc">利用深度学习与遗传算法，突破传统线性因子局限，构建非线性 Alpha 库。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.youtube.com/watch?v=xfzGZB4HhEE" target="_blank" rel="noopener noreferrer">
-                        Algorithmic Trading with Machine Learning (freeCodeCamp)
-                      </a>
-                      <span class="resource-meta">4小时完整课程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://quantra.quantinsti.com/course/introduction-to-machine-learning-for-trading" target="_blank" rel="noopener noreferrer">
-                        Introduction to Machine Learning for Trading (Quantra)
-                      </a>
-                      <span class="resource-meta">免费入门课程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://github.com/stefan-jansen/machine-learning-for-trading" target="_blank" rel="noopener noreferrer">
-                        ML for Algorithmic Trading (GitHub)
-                      </a>
-                      <span class="resource-meta">完整代码库</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://blog.quantinsti.com/factor-investing/" target="_blank" rel="noopener noreferrer">
-                        QuantInsti Blog - Factor Investing
-                      </a>
-                      <span class="resource-meta">行业文章</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://www.youtube.com/watch?v=xfzGZB4HhEE" target="_blank" class="resource-link">
+                  <span class="resource-icon">🎥</span>
+                  Algorithmic Trading with ML
+                </a>
+                <a href="https://github.com/stefan-jansen/machine-learning-for-trading" target="_blank" class="resource-link">
+                  <span class="resource-icon">�</span>
+                  ML for Trading Repo
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Module 2: Sentiment Analysis -->
-          <div class="module-card featured" data-module-id="sentiment-analysis">
-            <div class="module-image">
-              <img
-                src="assets/images/sentiment-analysis.png"
-                alt="社交媒体情绪分析"
-              />
-              <div class="module-badge">创新</div>
+          <!-- Module 2 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <img src="assets/images/sentiment-analysis.png" alt="Sentiment Analysis">
+              <div class="module-badge ai">NLP</div>
             </div>
-            <div class="module-content">
-              <h3>情绪指标开发</h3>
-              <p>
-                通过爬虫技术抓取X(Twitter)和主流媒体资讯，构建实时市场情绪指标。
-              </p>
-              <ul class="feature-list">
-                <li>✓ Twitter情绪爬虫</li>
-                <li>✓ 新闻资讯抓取</li>
-                <li>✓ NLP情感分析</li>
-                <li>✓ 实时情绪追踪</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Scrapy</span>
-                <span class="tech-tag">BERT</span>
-                <span class="tech-tag">Kafka</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">另类数据与情绪</h3>
+              <p class="module-desc">解析 Twitter 舆情与新闻流，利用 NLP 技术捕捉市场非理性波动。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://docs.tweepy.org/en/stable/" target="_blank" rel="noopener noreferrer">
-                        Tweepy Documentation (X API for Python)
-                      </a>
-                      <span class="resource-meta">官方接口库</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.datacamp.com/tutorial/text-analytics-beginners-nltk" target="_blank" rel="noopener noreferrer">
-                        NLP Tutorial with NLTK (DataCamp)
-                      </a>
-                      <span class="resource-meta">免费文章</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://huggingface.co/blog/sentiment-analysis-python" target="_blank" rel="noopener noreferrer">
-                        Sentiment Analysis with HuggingFace
-                      </a>
-                      <span class="resource-meta">官方文档</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.nltk.org/howto/sentiment.html" target="_blank" rel="noopener noreferrer">
-                        NLTK Sentiment Analysis (VADER)
-                      </a>
-                      <span class="resource-meta">官方文档</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://huggingface.co/blog/sentiment-analysis-python" target="_blank" class="resource-link">
+                  <span class="resource-icon">📚</span>
+                  HuggingFace Sentiment
+                </a>
+                <a href="https://www.datacamp.com/tutorial/text-analytics-beginners-nltk" target="_blank" class="resource-link">
+                  <span class="resource-icon">🎥</span>
+                  NLP with NLTK
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Module 3: Python Programming -->
-          <div class="module-card" data-module-id="python-programming">
-            <div class="module-image">
-              <img
-                src="assets/images/python-programming.png"
-                alt="Python量化编程"
-              />
+          <!-- Module 3 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <img src="assets/images/python-programming.png" alt="Python Infrastructure">
             </div>
-            <div class="module-content">
-              <h3>Python量化编程</h3>
-              <p>系统学习Python编程，掌握数据处理、API调用和量化分析工具链。</p>
-              <ul class="feature-list">
-                <li>✓ Python核心语法</li>
-                <li>✓ Pandas数据分析</li>
-                <li>✓ 交易所API接入</li>
-                <li>✓ 数据可视化</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">NumPy</span>
-                <span class="tech-tag">Matplotlib</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">量化基建开发</h3>
+              <p class="module-desc">掌握高性能 Python 编程，搭建可扩展的数据清洗与存储架构。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.freecodecamp.org/news/learn-algorithmic-trading-using-python/" target="_blank" rel="noopener noreferrer">
-                        Learn Algorithmic Trading Using Python (freeCodeCamp)
-                      </a>
-                      <span class="resource-meta">课程页面</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.coursera.org/learn/python-statistics-financial-analysis" target="_blank" rel="noopener noreferrer">
-                        Python & Statistics for Financial Analysis
-                      </a>
-                      <span class="resource-meta">香港科技大学</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/" target="_blank" rel="noopener noreferrer">
-                        Pandas Official Tutorial
-                      </a>
-                      <span class="resource-meta">官方教程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.quantstart.com/articles/" target="_blank" rel="noopener noreferrer">
-                        QuantStart Python Trading Guides
-                      </a>
-                      <span class="resource-meta">系列教程</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/" target="_blank" class="resource-link">
+                  <span class="resource-icon">⚡</span>
+                  Pandas Optimization
+                </a>
+                <a href="https://www.coursera.org/learn/python-statistics-financial-analysis" target="_blank" class="resource-link">
+                  <span class="resource-icon">🎥</span>
+                  Financial Analysis
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Module 4: Strategy Development -->
-          <div class="module-card" data-module-id="strategy-development">
-            <div class="module-image">
-              <img
-                src="assets/images/strategy-development.png"
-                alt="策略开发与回测"
-              />
+          <!-- Module 4 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <img src="assets/images/strategy-development.png" alt="Strategy Dev">
             </div>
-            <div class="module-content">
-              <h3>策略开发与回测</h3>
-              <p>构建完整的策略开发流程，从想法到验证的全链条实现。</p>
-              <ul class="feature-list">
-                <li>✓ 回测引擎搭建</li>
-                <li>✓ 性能指标分析</li>
-                <li>✓ 参数优化</li>
-                <li>✓ 稳健性检验</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Backtrader</span>
-                <span class="tech-tag">Zipline</span>
-                <span class="tech-tag">PyAlgoTrade</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">策略开发引擎</h3>
+              <p class="module-desc">基于事件驱动的回测框架，实现多周期、多品种策略的精准验证。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.backtrader.com/docu/quickstart/quickstart/" target="_blank" rel="noopener noreferrer">
-                        Backtrader Quickstart Guide
-                      </a>
-                      <span class="resource-meta">官方入门</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.coursera.org/specializations/machine-learning-trading" target="_blank" rel="noopener noreferrer">
-                        Machine Learning for Trading (Google Cloud)
-                      </a>
-                      <span class="resource-meta">免费试听</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.backtrader.com/docu/" target="_blank" rel="noopener noreferrer">
-                        Backtrader Documentation
-                      </a>
-                      <span class="resource-meta">官方文档</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://github.com/mementum/backtrader" target="_blank" rel="noopener noreferrer">
-                        Backtrader GitHub Repository
-                      </a>
-                      <span class="resource-meta">开源代码</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://www.backtrader.com/docu/quickstart/quickstart/" target="_blank" class="resource-link">
+                  <span class="resource-icon">🛠️</span>
+                  Backtrader Guide
+                </a>
+                <a href="https://github.com/mementum/backtrader" target="_blank" class="resource-link">
+                  <span class="resource-icon">�</span>
+                  Source Code
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Module 5: Risk Management -->
-          <div class="module-card" data-module-id="risk-management">
-            <div class="module-image">
-              <img src="assets/images/risk-management.png" alt="风险管理" />
+          <!-- Module 5 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <img src="assets/images/risk-management.png" alt="Risk Mgmt">
             </div>
-            <div class="module-content">
-              <h3>风险管理</h3>
-              <p>学习专业的风险控制技术，保护你的交易资本。</p>
-              <ul class="feature-list">
-                <li>✓ 仓位管理</li>
-                <li>✓ VaR计算</li>
-                <li>✓ 最大回撤控制</li>
-                <li>✓ Kelly准则</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Risk Metrics</span>
-                <span class="tech-tag">Portfolio</span>
-                <span class="tech-tag">Optimization</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">风控建模</h3>
+              <p class="module-desc">构建 Portfolio Optimization 模型，利用 Kelly 公式管理资金敞口。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.youtube.com/watch?v=mKZIoP5c5GI" target="_blank" rel="noopener noreferrer">
-                        Portfolio Risk Management (Khan Academy)
-                      </a>
-                      <span class="resource-meta">基础课程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.coursera.org/learn/introduction-portfolio-construction-python" target="_blank" rel="noopener noreferrer">
-                        Portfolio Construction with Python(EDHEC)
-                      </a>
-                      <span class="resource-meta">免费试听</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.quantstart.com/articles/Value-at-Risk-VaR-for-Algorithmic-Trading-Risk-Management-Part-I/" target="_blank" rel="noopener noreferrer">
-                        VaR for Algorithmic Trading
-                      </a>
-                      <span class="resource-meta">QuantStart文章</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://github.com/PyPortfolio/PyPortfolioOpt" target="_blank" rel="noopener noreferrer">
-                        PyPortfolioOpt Library
-                      </a>
-                      <span class="resource-meta">Python库</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://www.quantstart.com/articles/Value-at-Risk-VaR-for-Algorithmic-Trading-Risk-Management-Part-I/" target="_blank" class="resource-link">
+                  <span class="resource-icon">🛡️</span>
+                  VaR Models
+                </a>
+                <a href="https://github.com/PyPortfolio/PyPortfolioOpt" target="_blank" class="resource-link">
+                  <span class="resource-icon">💻</span>
+                  PyPortfolioOpt
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Module 6: Math & Stats -->
-          <div class="module-card" data-module-id="math-stats">
-            <div class="module-image">
-              <div class="placeholder-icon">📐</div>
+          <!-- Module 6 -->
+          <div class="module-card">
+            <div class="module-thumb">
+              <!-- Placeholder styled via CSS/JS or default image if needed, keeping simple for now -->
+             <div style="width:100%;height:100%;background:linear-gradient(45deg, #0f172a, #1e293b);display:flex;align-items:center;justify-content:center;color:#475569;font-size:3rem;">Σ</div>
             </div>
-            <div class="module-content">
-              <h3>数学与统计基础</h3>
-              <p>掌握量化交易背后的数学原理和统计学方法。</p>
-              <ul class="feature-list">
-                <li>✓ 概率论基础</li>
-                <li>✓ 时间序列</li>
-                <li>✓ 统计推断</li>
-                <li>✓ 优化理论</li>
-              </ul>
-              <div class="module-tech">
-                <span class="tech-tag">Statistics</span>
-                <span class="tech-tag">Time Series</span>
-                <span class="tech-tag">Calculus</span>
-              </div>
+            <div class="module-body">
+              <h3 class="module-title">数理统计基础</h3>
+              <p class="module-desc">夯实时间序列分析、随机过程与统计推断的理论基石。</p>
               
-              <!-- Learning Resources -->
-              <div class="learning-resources">
-                <h4 class="resources-title">📚 学习资源</h4>
-                <div class="resources-grid">
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.youtube.com/watch?v=xxpc-HPKN28" target="_blank" rel="noopener noreferrer">
-                        Statistics for Data Science (freeCodeCamp)
-                      </a>
-                      <span class="resource-meta">8小时课程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item video">
-                    <span class="resource-icon">🎥</span>
-                    <div class="resource-info">
-                      <a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener noreferrer">
-                        Statistics & Probability (Khan Academy)
-                      </a>
-                      <span class="resource-meta">免费课程</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://otexts.com/fpp3/" target="_blank" rel="noopener noreferrer">
-                        Forecasting: Principles and Practice
-                      </a>
-                      <span class="resource-meta">免费在线书</span>
-                    </div>
-                  </div>
-                  <div class="resource-item doc">
-                    <span class="resource-icon">📄</span>
-                    <div class="resource-info">
-                      <a href="https://www.statsmodels.org/stable/index.html" target="_blank" rel="noopener noreferrer">
-                        Statsmodels Documentation
-                      </a>
-                      <span class="resource-meta">时间序列库</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="resource-list">
+                <a href="https://otexts.com/fpp3/" target="_blank" class="resource-link">
+                  <span class="resource-icon">📖</span>
+                  Forecasting Principles
+                </a>
+                <a href="https://www.statsmodels.org/stable/index.html" target="_blank" class="resource-link">
+                  <span class="resource-icon">📊</span>
+                  Statsmodels
+                </a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -708,17 +362,12 @@
     <!-- CTA Section -->
     <section class="cta-section" id="start">
       <div class="container">
-        <div class="cta-content">
-          <h2>准备好开始你的量化交易之旅了吗？</h2>
-          <p>从零到一，系统化掌握现代量化交易技术</p>
-          <div class="cta-buttons">
-            <a href="#roadmap" class="btn btn-primary btn-large"
-              >查看学习路径</a
-            >
-            <a href="#modules" class="btn btn-secondary btn-large"
-              >探索核心模块</a
-            >
-          </div>
+        <div class="section-header">
+          <h2 class="section-title">开启 Alpha 探索之旅</h2>
+          <p class="section-subtitle">不要等待市场机会，用代码创造机会。</p>
+        </div>
+        <div class="hero-actions">
+          <a href="#roadmap" class="btn-glow">开始学习路径</a>
         </div>
       </div>
     </section>
@@ -726,20 +375,12 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <span class="logo-icon">📊</span>
-            <span class="logo-text">量化交易学习中心</span>
-          </div>
-          <p class="footer-tagline">从零到一，掌握AI驱动的量化交易</p>
-          <div class="footer-links">
-            <a href="#home">首页</a>
-            <a href="#roadmap">学习路径</a>
-            <a href="#modules">核心模块</a>
-          </div>
-          <p class="footer-copyright">
-            © 2026 量化交易学习中心. 持续学习，不断进化.
-          </p>
+        <div class="footer-brand">
+          <span class="footer-logo">⚡ Deep Quant</span>
+        </div>
+        <div class="footer-copy">
+          <p>© 2026 Deep Quant Learning. All rights reserved.</p>
+          <p style="margin-top: 0.5rem; color: #334155; font-size: 0.8rem;">Designed for the next generation of Algo Traders.</p>
         </div>
       </div>
     </footer>
